@@ -1,4 +1,4 @@
-product.product_type.*:
+product.type.*:
   type: config_entity
   label: 'Product type config'
   mapping:
