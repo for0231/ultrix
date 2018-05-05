@@ -1,0 +1,30 @@
+add products:
+  title: 'Create new Products'
+
+administer products:
+  title: 'Administer Products'
+  description: 'Allow to access the administration form to configure Products.'
+  restrict access: true
+
+delete products:
+  title: 'Delete Products'
+
+edit products:
+  title: 'Edit Products'
+
+view published products:
+  title: 'View published Products'
+
+view unpublished products:
+  title: 'View unpublished Products'
+
+view all product revisions:
+  title: 'View all Product revisions'
+
+revert all product revisions:
+  title: 'Revert all Product revisions'
+  description: 'Role requires permission <em>view Product revisions</em> and <em>edit rights</em> for products in question or <em>administer products</em>.'
+
+delete all product revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Product revisions</em> and <em>delete rights</em> for products in question or <em>administer products</em>.'
