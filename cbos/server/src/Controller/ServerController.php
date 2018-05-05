@@ -68,8 +68,8 @@ class ServerController extends ControllerBase implements ContainerInjectionInter
     $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $server->label()]) : $this->t('Revisions for %title', ['%title' => $server->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
-    $revert_permission = (($account->hasPermission("revert all server revisions") || $account->hasPermission('administer server entities')));
-    $delete_permission = (($account->hasPermission("delete all server revisions") || $account->hasPermission('administer server entities')));
+    $revert_permission = (($account->hasPermission("revert all server revisions") || $account->hasPermission('administer servers')));
+    $delete_permission = (($account->hasPermission("delete all server revisions") || $account->hasPermission('administer servers')));
 
     $rows = [];
 

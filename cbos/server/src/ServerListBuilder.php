@@ -7,7 +7,7 @@ use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
 
 /**
- * Defines a class to build a listing of Server entities.
+ * Defines a class to build a listing of Servers.
  *
  * @ingroup server
  */

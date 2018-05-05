@@ -4,7 +4,7 @@
  * @file
  * Contains server.page.inc.
  *
- * Page callback for Server entities.
+ * Page callback for Servers.
  */
 
 use Drupal\Core\Render\Element;

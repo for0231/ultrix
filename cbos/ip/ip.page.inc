@@ -4,7 +4,7 @@
  * @file
  * Contains ip.page.inc.
  *
- * Page callback for IP entities.
+ * Page callback for IPs.
  */
 
 use Drupal\Core\Render\Element;

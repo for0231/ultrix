@@ -35,7 +35,7 @@ class ServerSettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Server entities.
+   * Defines the settings form for Servers.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -46,7 +46,7 @@ class ServerSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['server_settings']['#markup'] = 'Settings form for Server entities. Manage field settings here.';
+    $form['server_settings']['#markup'] = 'Settings form for Servers. Manage field settings here.';
     return $form;
   }
 

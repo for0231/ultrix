@@ -3,7 +3,7 @@
 entity.server.collection:
   title: 'Server list'
   route_name: entity.server.collection
-  description: 'List Server entities'
+  description: 'List Servers'
   parent: system.admin_structure
   weight: 100
 

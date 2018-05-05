@@ -23,7 +23,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     },
  *   },
  *   config_prefix = "server_type",
- *   admin_permission = "administer site configuration",
+ *   admin_permission = "administer servers",
  *   bundle_of = "server",
  *   entity_keys = {
  *     "id" = "id",
@@ -31,11 +31,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "canonical" = "//server_type/{server_type}",
- *     "add-form" = "//server_type/add",
- *     "edit-form" = "//server_type/{server_type}/edit",
- *     "delete-form" = "//server_type/{server_type}/delete",
- *     "collection" = "//server_type"
+ *     "canonical" = "/server/type/{server_type}",
+ *     "add-form" = "/server/type/add",
+ *     "edit-form" = "/server/type/{server_type}/edit",
+ *     "delete-form" = "/server/type/{server_type}/delete",
+ *     "collection" = "/server/type"
  *   }
  * )
  */

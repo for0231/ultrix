@@ -8,10 +8,10 @@ use Drupal\Core\Language\LanguageInterface;
 use Drupal\ip\Entity\IpInterface;
 
 /**
- * Defines the storage handler class for IP entities.
+ * Defines the storage handler class for IPs.
  *
  * This extends the base storage class, adding required special handling for
- * IP entities.
+ * IPs.
  *
  * @ingroup ip
  */

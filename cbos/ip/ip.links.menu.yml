@@ -3,7 +3,7 @@
 entity.ip.collection:
   title: 'IP list'
   route_name: entity.ip.collection
-  description: 'List IP entities'
+  description: 'List IPs'
   parent: system.admin_structure
   weight: 100
 

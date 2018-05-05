@@ -23,7 +23,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     },
  *   },
  *   config_prefix = "ip_type",
- *   admin_permission = "administer site configuration",
+ *   admin_permission = "administer ips",
  *   bundle_of = "ip",
  *   entity_keys = {
  *     "id" = "id",
@@ -31,11 +31,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "canonical" = "//ip_type/{ip_type}",
- *     "add-form" = "//ip_type/add",
- *     "edit-form" = "//ip_type/{ip_type}/edit",
- *     "delete-form" = "//ip_type/{ip_type}/delete",
- *     "collection" = "//ip_type"
+ *     "canonical" = "/ip/type/{ip_type}",
+ *     "add-form" = "/ip/type/add",
+ *     "edit-form" = "/ip/type/{ip_type}/edit",
+ *     "delete-form" = "/ip/type/{ip_type}/delete",
+ *     "collection" = "/ip/type"
  *   }
  * )
  */

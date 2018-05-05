@@ -18,6 +18,7 @@ use Drupal\user\UserInterface;
  * @ContentEntityType(
  *   id = "server",
  *   label = @Translation("Server"),
+ *   label_collection = @Translation("Server"),
  *   bundle_label = @Translation("Server type"),
  *   handlers = {
  *     "storage" = "Drupal\server\ServerStorage",
@@ -42,7 +43,7 @@ use Drupal\user\UserInterface;
  *   revision_table = "server_revision",
  *   revision_data_table = "server_field_revision",
  *   translatable = TRUE,
- *   admin_permission = "administer server entities",
+ *   admin_permission = "administer servers",
  *   entity_keys = {
  *     "id" = "id",
  *     "revision" = "vid",

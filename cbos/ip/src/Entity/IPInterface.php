@@ -8,7 +8,7 @@ use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
 
 /**
- * Provides an interface for defining IP entities.
+ * Provides an interface for defining IPs.
  *
  * @ingroup ip
  */
