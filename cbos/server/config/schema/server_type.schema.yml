@@ -1,4 +1,4 @@
-server.server_type.*:
+server.type.*:
   type: config_entity
   label: 'Server type config'
   mapping:

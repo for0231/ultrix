@@ -1,0 +1,18 @@
+
+# Order menu items definition
+entity.order.collection:
+  title: 'Order list'
+  route_name: entity.order.collection
+  description: 'List Orders'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Order type menu items definition
+entity.order_type.collection:
+  title: 'Order type'
+  route_name: entity.order_type.collection
+  description: 'List Order type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

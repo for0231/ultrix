@@ -1,0 +1,11 @@
+entity.order.add_form:
+  route_name: entity.order.add_page
+  title: 'Add Order'
+  appears_on:
+    - entity.order.collection
+entity.order_type.add_form:
+  route_name: entity.order_type.add_form
+  title: 'Add Order type'
+  appears_on:
+    - entity.order_type.collection
+

@@ -3,6 +3,6 @@ status: true
 dependencies:
   enforeced:
     module:
-      - product
+      - order
 id: default
 label: Default

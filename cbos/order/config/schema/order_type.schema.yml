@@ -1,6 +1,6 @@
-ip.type.*:
+order.type.*:
   type: config_entity
-  label: 'IP type config'
+  label: 'Order type config'
   mapping:
     id:
       type: string

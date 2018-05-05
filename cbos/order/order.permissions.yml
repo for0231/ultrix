@@ -1,0 +1,30 @@
+add orders:
+  title: 'Create new Orders'
+
+administer orders:
+  title: 'Administer Orders'
+  description: 'Allow to access the administration form to configure Orders.'
+  restrict access: true
+
+delete orders:
+  title: 'Delete Orders'
+
+edit orders:
+  title: 'Edit Orders'
+
+view published orders:
+  title: 'View published Orders'
+
+view unpublished orders:
+  title: 'View unpublished Orders'
+
+view all order revisions:
+  title: 'View all Order revisions'
+
+revert all order revisions:
+  title: 'Revert all Order revisions'
+  description: 'Role requires permission <em>view Order revisions</em> and <em>edit rights</em> for orders in question or <em>administer orders</em>.'
+
+delete all order revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Order revisions</em> and <em>delete rights</em> for orders in question or <em>administer orders</em>.'

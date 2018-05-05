@@ -1,0 +1,7 @@
+name: 'Order'
+type: module
+description: 'The orders.'
+core: 8.x
+package: 'Ultrix'
+dependencies:
+  - product

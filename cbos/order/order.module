@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains order.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function order_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the order module.
+    case 'help.page.order':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The orders') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function order_theme() {
+  $theme = [];
+  $theme['order'] = [
+    'render element' => 'elements',
+    'file' => 'order.page.inc',
+    'template' => 'order',
+  ];
+  $theme['order_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'order.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function order_theme_suggestions_order(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#order'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'order__' . $sanitized_view_mode;
+  $suggestions[] = 'order__' . $entity->bundle();
+  $suggestions[] = 'order__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'order__' . $entity->id();
+  $suggestions[] = 'order__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

@@ -1,85 +1,85 @@
 <?php
 
-namespace Drupal\ip\Controller;
+namespace Drupal\order\Controller;
 
 use Drupal\Component\Utility\Xss;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Url;
-use Drupal\ip\Entity\IpInterface;
+use Drupal\order\Entity\OrderInterface;
 
 /**
- * Class IpController.
+ * Class OrderController.
  *
- *  Returns responses for IP routes.
+ *  Returns responses for Order routes.
  */
-class IpController extends ControllerBase implements ContainerInjectionInterface {
+class OrderController extends ControllerBase implements ContainerInjectionInterface {
 
   /**
-   * Displays a IP  revision.
+   * Displays a Order  revision.
    *
-   * @param int $ip_revision
-   *   The IP  revision ID.
+   * @param int $order_revision
+   *   The Order  revision ID.
    *
    * @return array
    *   An array suitable for drupal_render().
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
-  public function revisionShow($ip_revision) {
-    $ip = $this->entityManager()->getStorage('ip')->loadRevision($ip_revision);
-    $view_builder = $this->entityManager()->getViewBuilder('ip');
+  public function revisionShow($order_revision) {
+    $order = $this->entityManager()->getStorage('order')->loadRevision($order_revision);
+    $view_builder = $this->entityManager()->getViewBuilder('order');
 
-    return $view_builder->view($ip);
+    return $view_builder->view($order);
   }
 
   /**
-   * Page title callback for a IP  revision.
+   * Page title callback for a Order  revision.
    *
-   * @param int $ip_revision
-   *   The IP  revision ID.
+   * @param int $order_revision
+   *   The Order  revision ID.
    *
    * @return string
    *   The page title.
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
-  public function revisionPageTitle($ip_revision) {
-    $ip = $this->entityManager()->getStorage('ip')->loadRevision($ip_revision);
-    return $this->t('Revision of %title from %date', ['%title' => $ip->label(), '%date' => format_date($ip->getRevisionCreationTime())]);
+  public function revisionPageTitle($order_revision) {
+    $order = $this->entityManager()->getStorage('order')->loadRevision($order_revision);
+    return $this->t('Revision of %title from %date', ['%title' => $order->label(), '%date' => format_date($order->getRevisionCreationTime())]);
   }
 
   /**
-   * Generates an overview table of older revisions of a IP .
+   * Generates an overview table of older revisions of a Order .
    *
-   * @param \Drupal\ip\Entity\IpInterface $ip
-   *   A IP  object.
+   * @param \Drupal\order\Entity\OrderInterface $order
+   *   A Order  object.
    *
    * @return array
    *   An array as expected by drupal_render().
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
-  public function revisionOverview(IpInterface $ip) {
+  public function revisionOverview(OrderInterface $order) {
     $account = $this->currentUser();
-    $langcode = $ip->language()->getId();
-    $langname = $ip->language()->getName();
-    $languages = $ip->getTranslationLanguages();
+    $langcode = $order->language()->getId();
+    $langname = $order->language()->getName();
+    $languages = $order->getTranslationLanguages();
     $has_translations = (count($languages) > 1);
-    $ip_storage = $this->entityManager()->getStorage('ip');
+    $order_storage = $this->entityManager()->getStorage('order');
 
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $ip->label()]) : $this->t('Revisions for %title', ['%title' => $ip->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $order->label()]) : $this->t('Revisions for %title', ['%title' => $order->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
-    $revert_permission = (($account->hasPermission("revert all ip revisions") || $account->hasPermission('administer ips')));
-    $delete_permission = (($account->hasPermission("delete all ip revisions") || $account->hasPermission('administer ips')));
+    $revert_permission = (($account->hasPermission("revert all order revisions") || $account->hasPermission('administer orders')));
+    $delete_permission = (($account->hasPermission("delete all order revisions") || $account->hasPermission('administer orders')));
 
     $rows = [];
 
-    $vids = $ip_storage->revisionIds($ip);
+    $vids = $order_storage->revisionIds($order);
 
     $latest_revision = TRUE;
 
     foreach (array_reverse($vids) as $vid) {
-      /** @var \Drupal\ip\IpInterface $revision */
-      $revision = $ip_storage->loadRevision($vid);
+      /** @var \Drupal\order\OrderInterface $revision */
+      $revision = $order_storage->loadRevision($vid);
       // Only show revisions that are affected by the language that is being
       // displayed.
       if ($revision->hasTranslation($langcode) && $revision->getTranslation($langcode)->isRevisionTranslationAffected()) {
@@ -90,11 +90,11 @@ class IpController extends ControllerBase implements ContainerInjectionInterface
 
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->getRevisionCreationTime(), 'short');
-        if ($vid != $ip->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.ip.revision', ['ip' => $ip->id(), 'ip_revision' => $vid]));
+        if ($vid != $order->getRevisionId()) {
+          $link = $this->l($date, new Url('entity.order.revision', ['order' => $order->id(), 'order_revision' => $vid]));
         }
         else {
-          $link = $ip->link($date);
+          $link = $order->link($date);
         }
 
         $row = [];
@@ -130,15 +130,15 @@ class IpController extends ControllerBase implements ContainerInjectionInterface
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.ip.translation_revert', ['ip' => $ip->id(), 'ip_revision' => $vid, 'langcode' => $langcode]) :
-              Url::fromRoute('entity.ip.revision_revert', ['ip' => $ip->id(), 'ip_revision' => $vid]),
+              Url::fromRoute('entity.order.translation_revert', ['order' => $order->id(), 'order_revision' => $vid, 'langcode' => $langcode]) :
+              Url::fromRoute('entity.order.revision_revert', ['order' => $order->id(), 'order_revision' => $vid]),
             ];
           }
 
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.ip.revision_delete', ['ip' => $ip->id(), 'ip_revision' => $vid]),
+              'url' => Url::fromRoute('entity.order.revision_delete', ['order' => $order->id(), 'order_revision' => $vid]),
             ];
           }
 
@@ -154,7 +154,7 @@ class IpController extends ControllerBase implements ContainerInjectionInterface
       }
     }
 
-    $build['ip_revisions_table'] = [
+    $build['order_revisions_table'] = [
       '#theme' => 'table',
       '#rows' => $rows,
       '#header' => $header,

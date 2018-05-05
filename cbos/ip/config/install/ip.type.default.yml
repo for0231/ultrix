@@ -3,6 +3,6 @@ status: true
 dependencies:
   enforeced:
     module:
-      - product
+      - ip
 id: default
 label: Default
