@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *       "html" = "Drupal\product\ProductTypeHtmlRouteProvider",
  *     },
  *   },
- *   config_prefix = "product_type",
+ *   config_prefix = "type",
  *   admin_permission = "administer products",
  *   bundle_of = "product",
  *   entity_keys = {

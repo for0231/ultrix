@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *       "html" = "Drupal\order\OrderTypeHtmlRouteProvider",
  *     },
  *   },
- *   config_prefix = "order_type",
+ *   config_prefix = "type",
  *   admin_permission = "administer orders",
  *   bundle_of = "order",
  *   entity_keys = {

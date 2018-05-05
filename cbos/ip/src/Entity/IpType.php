@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *       "html" = "Drupal\ip\IpTypeHtmlRouteProvider",
  *     },
  *   },
- *   config_prefix = "ip_type",
+ *   config_prefix = "type",
  *   admin_permission = "administer ips",
  *   bundle_of = "ip",
  *   entity_keys = {

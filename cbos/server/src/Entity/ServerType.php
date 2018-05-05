@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *       "html" = "Drupal\server\ServerTypeHtmlRouteProvider",
  *     },
  *   },
- *   config_prefix = "server_type",
+ *   config_prefix = "type",
  *   admin_permission = "administer servers",
  *   bundle_of = "server",
  *   entity_keys = {
