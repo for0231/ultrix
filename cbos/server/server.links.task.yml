@@ -1,8 +1,4 @@
 # Server routing definition
-server.settings_tab:
-  route_name: server.settings
-  title: 'Settings'
-  base_route: server.settings
 
 entity.server.canonical:
   route_name: entity.server.canonical

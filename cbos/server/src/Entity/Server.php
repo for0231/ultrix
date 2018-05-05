@@ -18,6 +18,7 @@ use Drupal\user\UserInterface;
  * @ContentEntityType(
  *   id = "server",
  *   label = @Translation("Server"),
+ *   bundle_label = @Translation("Server type"),
  *   handlers = {
  *     "storage" = "Drupal\server\ServerStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
@@ -45,6 +46,7 @@ use Drupal\user\UserInterface;
  *   entity_keys = {
  *     "id" = "id",
  *     "revision" = "vid",
+ *     "bundle" = "type",
  *     "label" = "name",
  *     "uuid" = "uuid",
  *     "uid" = "user_id",
@@ -52,18 +54,20 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/server/{server}",
- *     "add-form" = "/admin/server/add",
- *     "edit-form" = "/admin/server/{server}/edit",
- *     "delete-form" = "/admin/server/{server}/delete",
- *     "version-history" = "/admin/server/{server}/revisions",
- *     "revision" = "/admin/server/{server}/revisions/{server_revision}/view",
- *     "revision_revert" = "/admin/server/{server}/revisions/{server_revision}/revert",
- *     "revision_delete" = "/admin/server/{server}/revisions/{server_revision}/delete",
- *     "translation_revert" = "/admin/server/{server}/revisions/{server_revision}/revert/{langcode}",
- *     "collection" = "/admin/server",
+ *     "canonical" = "/server/{server}",
+ *     "add-page" = "/server/add",
+ *     "add-form" = "/server/add/{server_type}",
+ *     "edit-form" = "/server/{server}/edit",
+ *     "delete-form" = "/server/{server}/delete",
+ *     "version-history" = "/server/{server}/revisions",
+ *     "revision" = "/server/{server}/revisions/{server_revision}/view",
+ *     "revision_revert" = "/server/{server}/revisions/{server_revision}/revert",
+ *     "revision_delete" = "/server/{server}/revisions/{server_revision}/delete",
+ *     "translation_revert" = "/server/{server}/revisions/{server_revision}/revert/{langcode}",
+ *     "collection" = "/server",
  *   },
- *   field_ui_base_route = "server.settings"
+ *   bundle_entity_type = "server_type",
+ *   field_ui_base_route = "entity.server_type.edit_form"
  * )
  */
 class Server extends RevisionableContentEntityBase implements ServerInterface {

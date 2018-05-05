@@ -23,6 +23,7 @@ class ServerController extends ControllerBase implements ContainerInjectionInter
    *
    * @return array
    *   An array suitable for drupal_render().
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
   public function revisionShow($server_revision) {
     $server = $this->entityManager()->getStorage('server')->loadRevision($server_revision);
@@ -39,6 +40,7 @@ class ServerController extends ControllerBase implements ContainerInjectionInter
    *
    * @return string
    *   The page title.
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
   public function revisionPageTitle($server_revision) {
     $server = $this->entityManager()->getStorage('server')->loadRevision($server_revision);
@@ -53,6 +55,7 @@ class ServerController extends ControllerBase implements ContainerInjectionInter
    *
    * @return array
    *   An array as expected by drupal_render().
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
   public function revisionOverview(ServerInterface $server) {
     $account = $this->currentUser();

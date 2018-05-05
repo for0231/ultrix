@@ -29,11 +29,7 @@ class ServerListBuilder extends EntityListBuilder {
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\server\Entity\Server */
     $row['id'] = $entity->id();
-    $row['name'] = Link::createFromRoute(
-      $entity->label(),
-      'entity.server.edit_form',
-      ['server' => $entity->id()]
-    );
+    $row['name'] = $entity->toLink();
     return $row + parent::buildRow($entity);
   }
 

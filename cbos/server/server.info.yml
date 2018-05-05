@@ -1,5 +1,5 @@
-name: 'Server'
+name: 'server'
 type: module
-description: 'Idc servers.'
+description: 'The servers.'
 core: 8.x
 package: 'Ultrix'

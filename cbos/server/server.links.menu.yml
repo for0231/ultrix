@@ -7,8 +7,12 @@ entity.server.collection:
   parent: system.admin_structure
   weight: 100
 
-server.admin.structure.settings:
-  title: 'Server settings'
-  description: 'Configure Server entities'
-  route_name: server.settings
+
+# Server type menu items definition
+entity.server_type.collection:
+  title: 'Server type'
+  route_name: entity.server_type.collection
+  description: 'List Server type (bundles)'
   parent: system.admin_structure
+  weight: 99
+
