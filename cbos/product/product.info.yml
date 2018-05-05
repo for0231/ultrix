@@ -1,5 +1,5 @@
 name: 'Product'
 type: module
-description: 'The idc products.'
+description: 'The Products.'
 core: 8.x
 package: 'Ultrix'

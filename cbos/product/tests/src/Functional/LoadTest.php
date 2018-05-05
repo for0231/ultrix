@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\idc_product\Functional;
+namespace Drupal\Tests\product\Functional;
 
 use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
@@ -8,7 +8,7 @@ use Drupal\Tests\BrowserTestBase;
 /**
  * Simple test to ensure that main page loads with module enabled.
  *
- * @group idc_product
+ * @group product
  */
 class LoadTest extends BrowserTestBase {
 
@@ -17,7 +17,7 @@ class LoadTest extends BrowserTestBase {
    *
    * @var array
    */
-  public static $modules = ['idc_product'];
+  public static $modules = ['product'];
 
   /**
    * A user with permission to administer site configuration.
