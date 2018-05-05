@@ -1,0 +1,6 @@
+ultrix_core.admin_structure:
+  route_name: ultrix_core.admin
+  parent: system.admin
+  description: 'Administer ultrix content, etc.'
+  title: Ultrix
+  weight: 100

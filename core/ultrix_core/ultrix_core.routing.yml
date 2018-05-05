@@ -1,0 +1,7 @@
+ultrix_core.admin:
+  path: '/admin/ultrix'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Ultrix'
+  requirements:
+    _permission: 'access administration pages'

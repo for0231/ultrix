@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -33,3 +34,40 @@ function ultrix_core_theme() {
     ],
   ];
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ultrix_core_preprocess_menu__role_menu(&$variables) {
+  $icons = [
+    'ultrix_core.admin' => 'fa fa-cubes',
+  ];
+
+  _eabax_core_set_menu_items_icon($variables['items'], $icons);
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function ultrix_core_toolbar() {
+  $items = [];
+
+  $items['ultrix_core'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Ultrix2'),
+      '#url' => Url::fromRoute('ultrix_core.admin'),
+      '#optionns' => [
+        'attributes' => [
+          'title' => t('Uc'),
+          'class' => ['toolbar-icon', 'toolbar-icon-ultrix-admin'],
+        ],
+      ],
+    ],
+    '#weight' => 20,
+  ];
+
+  return $items;
+}
+

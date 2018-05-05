@@ -106,6 +106,13 @@ class IP extends ContentEntityBase implements IPInterface {
   /**
    * {@inheritdoc}
    */
+  public function preSave(EntityStorageInterface $storage) {
+    $this->set('iplong', ip2long($this->label()));
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
@@ -113,7 +120,7 @@ class IP extends ContentEntityBase implements IPInterface {
       ->setLabel(t('Name'))
       ->setDescription(t('The name of the IPS.'))
       ->setSettings([
-        'max_length' => 50,
+        'max_length' => 15,
         'text_processing' => 0,
       ])
       ->setDefaultValue('')
@@ -129,6 +136,12 @@ class IP extends ContentEntityBase implements IPInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
+
+    $fields['iplong'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('IP Number'))
+      ->setDescription(t('The number of ip.'))
+      ->setSetting('unsigned', TRUE)
+      ->setSetting('size', 'big');
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
