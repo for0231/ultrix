@@ -37,6 +37,7 @@ class IpForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
+    parent::validateForm($form, $form_state);
     $name = $form_state->getValue('name')[0][value];
     if (empty(ip2long($name))) {
       $form_state->setErrorByName('name', $this->t('The name of the ip is illegal!'));

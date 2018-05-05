@@ -18,7 +18,6 @@ class ServerListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Server ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -28,7 +27,6 @@ class ServerListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\server\Entity\Server */
-    $row['id'] = $entity->id();
     $row['name'] = $entity->toLink();
     return $row + parent::buildRow($entity);
   }

@@ -10,6 +10,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  * @ConfigEntityType(
  *   id = "ip_type",
  *   label = @Translation("IP type"),
+ *   label_collectionn = @Translation("IP type"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\ip\IpTypeListBuilder",

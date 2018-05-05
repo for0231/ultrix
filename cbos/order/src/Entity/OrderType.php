@@ -10,6 +10,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  * @ConfigEntityType(
  *   id = "order_type",
  *   label = @Translation("Order type"),
+ *   label_collection = @Translation("Order type"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\order\OrderTypeListBuilder",

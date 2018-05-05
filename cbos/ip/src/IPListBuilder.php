@@ -18,7 +18,6 @@ class IpListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('IP ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -28,12 +27,7 @@ class IpListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\ip\Entity\Ip */
-    $row['id'] = $entity->id();
-    $row['name'] = Link::createFromRoute(
-      $entity->label(),
-      'entity.ip.edit_form',
-      ['ip' => $entity->id()]
-    );
+    $row['name'] = $entity->toLink();
     return $row + parent::buildRow($entity);
   }
 

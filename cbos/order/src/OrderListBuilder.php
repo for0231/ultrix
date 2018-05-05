@@ -18,7 +18,6 @@ class OrderListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Order ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -28,7 +27,6 @@ class OrderListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\order\Entity\Order */
-    $row['id'] = $entity->id();
     $row['name'] = $entity->toLink();
     return $row + parent::buildRow($entity);
   }
