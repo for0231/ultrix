@@ -1,0 +1,5 @@
+name: 'IP'
+type: module
+description: 'The IP management for Ultrix.'
+core: 8.x
+package: 'Ultrix'
