@@ -1,0 +1,5 @@
+name: 'Ultrix_core'
+type: module
+description: 'Ultrix core'
+core: 8.x
+package: 'Ultrix'

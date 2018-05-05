@@ -1,0 +1,14 @@
+{
+  "name": "drupal/ultrix_core",
+  "type": "drupal-module",
+  "description": "Ultrix core",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/ultrix_core",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/ultrix_core",
+    "source": "http://cgit.drupalcode.org/ultrix_core"
+  },
+  "require": { }
+}

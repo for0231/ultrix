@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains ultrix_core.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ultrix_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ultrix_core module.
+    case 'help.page.ultrix_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Ultrix core') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ultrix_core_theme() {
+  return [
+    'ultrix_core' => [
+      'render element' => 'children',
+    ],
+  ];
+}
