@@ -7,17 +7,18 @@ use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
 
 /**
- * Defines a class to build a listing of IPS.
+ * Defines a class to build a listing of IP entities.
  *
  * @ingroup ip
  */
-class IPListBuilder extends EntityListBuilder {
+class IpListBuilder extends EntityListBuilder {
 
 
   /**
    * {@inheritdoc}
    */
   public function buildHeader() {
+    $header['id'] = $this->t('IP ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -26,8 +27,13 @@ class IPListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\ip\Entity\IP */
-    $row['name'] = $entity->toLink();
+    /* @var $entity \Drupal\ip\Entity\Ip */
+    $row['id'] = $entity->id();
+    $row['name'] = Link::createFromRoute(
+      $entity->label(),
+      'entity.ip.edit_form',
+      ['ip' => $entity->id()]
+    );
     return $row + parent::buildRow($entity);
   }
 

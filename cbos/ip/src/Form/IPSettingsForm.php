@@ -6,11 +6,11 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class IPSettingsForm.
+ * Class IpSettingsForm.
  *
  * @ingroup ip
  */
-class IPSettingsForm extends FormBase {
+class IpSettingsForm extends FormBase {
 
   /**
    * Returns a unique string identifying the form.
@@ -35,7 +35,7 @@ class IPSettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for IPS.
+   * Defines the settings form for IP entities.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -46,7 +46,7 @@ class IPSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['ip_settings']['#markup'] = 'Settings form for IPS. Manage field settings here.';
+    $form['ip_settings']['#markup'] = 'Settings form for IP entities. Manage field settings here.';
     return $form;
   }
 

@@ -16,7 +16,7 @@ function ip_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.ip':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('The IP management for Ultrix.') . '</p>';
+      $output .= '<p>' . t('The ips.') . '</p>';
       return $output;
 
     default:
@@ -27,9 +27,32 @@ function ip_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function ip_theme() {
-  return [
-    'ip' => [
-      'render element' => 'children',
-    ],
+  $theme = [];
+  $theme['ip'] = [
+    'render element' => 'elements',
+    'file' => 'ip.page.inc',
+    'template' => 'ip',
   ];
+  $theme['ip_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'ip.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function ip_theme_suggestions_ip(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#ip'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'ip__' . $sanitized_view_mode;
+  $suggestions[] = 'ip__' . $entity->bundle();
+  $suggestions[] = 'ip__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'ip__' . $entity->id();
+  $suggestions[] = 'ip__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
 }

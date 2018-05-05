@@ -4,13 +4,13 @@
  * @file
  * Contains ip.page.inc.
  *
- * Page callback for IPS.
+ * Page callback for IP entities.
  */
 
 use Drupal\Core\Render\Element;
 
 /**
- * Prepares variables for Ip templates.
+ * Prepares variables for IP templates.
  *
  * Default template: ip.html.twig.
  *
@@ -20,7 +20,7 @@ use Drupal\Core\Render\Element;
  *   - attributes: HTML attributes for the containing element.
  */
 function template_preprocess_ip(array &$variables) {
-  // Fetch IP Entity Object.
+  // Fetch Ip Entity Object.
   $ip = $variables['elements']['#ip'];
 
   // Helpful $content variable for templates.

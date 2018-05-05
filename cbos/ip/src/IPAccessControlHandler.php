@@ -8,29 +8,29 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Access controller for the IPS.
+ * Access controller for the IP entity.
  *
- * @see \Drupal\ip\Entity\IP.
+ * @see \Drupal\ip\Entity\Ip.
  */
-class IPAccessControlHandler extends EntityAccessControlHandler {
+class IpAccessControlHandler extends EntityAccessControlHandler {
 
   /**
    * {@inheritdoc}
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
-    /** @var \Drupal\ip\Entity\IPInterface $entity */
+    /** @var \Drupal\ip\Entity\IpInterface $entity */
     switch ($operation) {
       case 'view':
         if (!$entity->isPublished()) {
-          return AccessResult::allowedIfHasPermission($account, 'view unpublished ips');
+          return AccessResult::allowedIfHasPermission($account, 'view unpublished ip entities');
         }
-        return AccessResult::allowedIfHasPermission($account, 'view published ips');
+        return AccessResult::allowedIfHasPermission($account, 'view published ip entities');
 
       case 'update':
-        return AccessResult::allowedIfHasPermission($account, 'edit ips');
+        return AccessResult::allowedIfHasPermission($account, 'edit ip entities');
 
       case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete ips');
+        return AccessResult::allowedIfHasPermission($account, 'delete ip entities');
     }
 
     // Unknown operation, no opinion.
@@ -41,7 +41,7 @@ class IPAccessControlHandler extends EntityAccessControlHandler {
    * {@inheritdoc}
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add ips');
+    return AccessResult::allowedIfHasPermission($account, 'add ip entities');
   }
 
 }

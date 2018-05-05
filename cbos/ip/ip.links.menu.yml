@@ -1,14 +1,18 @@
 
-# Ip menu items definition
+# IP menu items definition
 entity.ip.collection:
-  title: 'Ip list'
+  title: 'IP list'
   route_name: entity.ip.collection
-  description: 'List IPS'
-  parent: ultrix_core.admin
+  description: 'List IP entities'
+  parent: system.admin_structure
   weight: 100
 
-ip.admin.structure.settings:
-  title: 'Ip settings'
-  description: 'Configure IPS'
-  route_name: ip.settings
-  parent: ultrix_core.admin
+
+# IP type menu items definition
+entity.ip_type.collection:
+  title: 'IP type'
+  route_name: entity.ip_type.collection
+  description: 'List IP type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

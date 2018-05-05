@@ -5,9 +5,9 @@ namespace Drupal\ip\Entity;
 use Drupal\views\EntityViewsData;
 
 /**
- * Provides Views data for IPS.
+ * Provides Views data for IP entities.
  */
-class IPViewsData extends EntityViewsData {
+class IpViewsData extends EntityViewsData {
 
   /**
    * {@inheritdoc}

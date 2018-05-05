@@ -1,7 +1,7 @@
 {
   "name": "drupal/ip",
   "type": "drupal-module",
-  "description": "The IP management for Ultrix.",
+  "description": "The ips.",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
   "homepage": "https://www.drupal.org/project/ip",
