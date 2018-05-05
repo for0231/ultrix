@@ -1,0 +1,14 @@
+{
+  "name": "drupal/idc_product",
+  "type": "drupal-module",
+  "description": "The idc products.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/idc_product",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/idc_product",
+    "source": "http://cgit.drupalcode.org/idc_product"
+  },
+  "require": { }
+}

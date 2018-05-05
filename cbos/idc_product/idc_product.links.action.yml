@@ -1,0 +1,11 @@
+entity.idc_product.add_form:
+  route_name: entity.idc_product.add_page
+  title: 'Add Idc Product'
+  appears_on:
+    - entity.idc_product.collection
+entity.idc_product_type.add_form:
+  route_name: entity.idc_product_type.add_form
+  title: 'Add Idc Product type'
+  appears_on:
+    - entity.idc_product_type.collection
+

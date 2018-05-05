@@ -1,0 +1,18 @@
+
+# Idc Product menu items definition
+entity.idc_product.collection:
+  title: 'Idc Product list'
+  route_name: entity.idc_product.collection
+  description: 'List Idc Products'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Idc Product type menu items definition
+entity.idc_product_type.collection:
+  title: 'Idc Product type'
+  route_name: entity.idc_product_type.collection
+  description: 'List Idc Product type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

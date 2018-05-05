@@ -1,0 +1,23 @@
+# Idc Product routing definition
+
+entity.idc_product.canonical:
+  route_name: entity.idc_product.canonical
+  base_route: entity.idc_product.canonical
+  title: 'View'
+
+entity.idc_product.edit_form:
+  route_name: entity.idc_product.edit_form
+  base_route: entity.idc_product.canonical
+  title: 'Edit'
+
+entity.idc_product.version_history:
+  route_name: entity.idc_product.version_history
+  base_route: entity.idc_product.canonical
+  title: 'Revisions'
+
+entity.idc_product.delete_form:
+  route_name:  entity.idc_product.delete_form
+  base_route:  entity.idc_product.canonical
+  title: Delete
+  weight: 10
+

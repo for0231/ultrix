@@ -1,0 +1,30 @@
+add idc products:
+  title: 'Create new Idc Products'
+
+administer idc products:
+  title: 'Administer Idc Products'
+  description: 'Allow to access the administration form to configure Idc Products.'
+  restrict access: true
+
+delete idc products:
+  title: 'Delete Idc Products'
+
+edit idc products:
+  title: 'Edit Idc Products'
+
+view published idc products:
+  title: 'View published Idc Products'
+
+view unpublished idc products:
+  title: 'View unpublished Idc Products'
+
+view all idc product revisions:
+  title: 'View all Idc Product revisions'
+
+revert all idc product revisions:
+  title: 'Revert all Idc Product revisions'
+  description: 'Role requires permission <em>view Idc Product revisions</em> and <em>edit rights</em> for idc products in question or <em>administer idc products</em>.'
+
+delete all idc product revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Idc Product revisions</em> and <em>delete rights</em> for idc products in question or <em>administer idc products</em>.'
