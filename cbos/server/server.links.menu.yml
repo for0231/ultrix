@@ -1,0 +1,14 @@
+
+# Server menu items definition
+entity.server.collection:
+  title: 'Server list'
+  route_name: entity.server.collection
+  description: 'List Server entities'
+  parent: system.admin_structure
+  weight: 100
+
+server.admin.structure.settings:
+  title: 'Server settings'
+  description: 'Configure Server entities'
+  route_name: server.settings
+  parent: system.admin_structure

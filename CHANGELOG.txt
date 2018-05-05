@@ -1,6 +1,6 @@
 Ultrix 18.05 testing
 ---------------------------
 -- Added modules:
-    * Core modules:
-    * Common business objects:
+    * Core modules: ultrix_core
+    * Common business objects: ip, server
     * Product modules
