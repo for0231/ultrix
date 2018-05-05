@@ -10,13 +10,14 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Ip entity.
+ * Defines the IPS.
  *
  * @ingroup ip
  *
  * @ContentEntityType(
  *   id = "ip",
- *   label = @Translation("Ip"),
+ *   label = @Translation("IP"),
+ *   label_collection = @Translation("IP"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\ip\IPListBuilder",
@@ -34,7 +35,7 @@ use Drupal\user\UserInterface;
  *     },
  *   },
  *   base_table = "ip",
- *   admin_permission = "administer ip entities",
+ *   admin_permission = "administer ips",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -44,11 +45,11 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/ip/ip/{ip}",
- *     "add-form" = "/admin/ip/ip/add",
- *     "edit-form" = "/admin/ip/ip/{ip}/edit",
- *     "delete-form" = "/admin/ip/ip/{ip}/delete",
- *     "collection" = "/admin/ip/ip",
+ *     "canonical" = "/admin/ip/{ip}",
+ *     "add-form" = "/admin/ip/add",
+ *     "edit-form" = "/admin/ip/{ip}/edit",
+ *     "delete-form" = "/admin/ip/{ip}/delete",
+ *     "collection" = "/admin/ip",
  *   },
  *   field_ui_base_route = "ip.settings"
  * )
@@ -56,16 +57,6 @@ use Drupal\user\UserInterface;
 class IP extends ContentEntityBase implements IPInterface {
 
   use EntityChangedTrait;
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
-    parent::preCreate($storage_controller, $values);
-    $values += [
-      'user_id' => \Drupal::currentUser()->id(),
-    ];
-  }
 
   /**
    * {@inheritdoc}
@@ -100,36 +91,6 @@ class IP extends ContentEntityBase implements IPInterface {
   /**
    * {@inheritdoc}
    */
-  public function getOwner() {
-    return $this->get('user_id')->entity;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getOwnerId() {
-    return $this->get('user_id')->target_id;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function setOwnerId($uid) {
-    $this->set('user_id', $uid);
-    return $this;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function setOwner(UserInterface $account) {
-    $this->set('user_id', $account->id());
-    return $this;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function isPublished() {
     return (bool) $this->getEntityKey('status');
   }
@@ -148,34 +109,9 @@ class IP extends ContentEntityBase implements IPInterface {
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
-    $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Ip entity.'))
-      ->setRevisionable(TRUE)
-      ->setSetting('target_type', 'user')
-      ->setSetting('handler', 'default')
-      ->setTranslatable(TRUE)
-      ->setDisplayOptions('view', [
-        'label' => 'hidden',
-        'type' => 'author',
-        'weight' => 0,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'entity_reference_autocomplete',
-        'weight' => 5,
-        'settings' => [
-          'match_operator' => 'CONTAINS',
-          'size' => '60',
-          'autocomplete_type' => 'tags',
-          'placeholder' => '',
-        ],
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Ip entity.'))
+      ->setDescription(t('The name of the IPS.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,

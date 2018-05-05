@@ -4,16 +4,13 @@ namespace Drupal\ip\Entity;
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
-use Drupal\user\EntityOwnerInterface;
 
 /**
- * Provides an interface for defining Ip entities.
+ * Provides an interface for defining IPS.
  *
  * @ingroup ip
  */
-interface IPInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
-
-  // Add get/set methods for your configuration properties here.
+interface IPInterface extends ContentEntityInterface, EntityChangedInterface {
 
   /**
    * Gets the Ip name.
@@ -30,7 +27,7 @@ interface IPInterface extends ContentEntityInterface, EntityChangedInterface, En
    *   The Ip name.
    *
    * @return \Drupal\ip\Entity\IPInterface
-   *   The called Ip entity.
+   *   The called IPS.
    */
   public function setName($name);
 
@@ -49,7 +46,7 @@ interface IPInterface extends ContentEntityInterface, EntityChangedInterface, En
    *   The Ip creation timestamp.
    *
    * @return \Drupal\ip\Entity\IPInterface
-   *   The called Ip entity.
+   *   The called IPS.
    */
   public function setCreatedTime($timestamp);
 
@@ -70,7 +67,7 @@ interface IPInterface extends ContentEntityInterface, EntityChangedInterface, En
    *   TRUE to set this Ip to published, FALSE to set it to unpublished.
    *
    * @return \Drupal\ip\Entity\IPInterface
-   *   The called Ip entity.
+   *   The called IPS.
    */
   public function setPublished($published);
 

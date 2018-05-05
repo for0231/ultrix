@@ -35,7 +35,7 @@ class IPSettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Ip entities.
+   * Defines the settings form for IPS.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -46,7 +46,7 @@ class IPSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['ip_settings']['#markup'] = 'Settings form for Ip entities. Manage field settings here.';
+    $form['ip_settings']['#markup'] = 'Settings form for IPS. Manage field settings here.';
     return $form;
   }
 

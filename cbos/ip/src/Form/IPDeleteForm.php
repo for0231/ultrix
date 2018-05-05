@@ -5,7 +5,7 @@ namespace Drupal\ip\Form;
 use Drupal\Core\Entity\ContentEntityDeleteForm;
 
 /**
- * Provides a form for deleting Ip entities.
+ * Provides a form for deleting IPS.
  *
  * @ingroup ip
  */

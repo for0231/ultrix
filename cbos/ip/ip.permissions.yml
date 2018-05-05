@@ -1,19 +1,19 @@
-add ip entities:
-  title: 'Create new Ip entities'
+add ips:
+  title: 'Create new IPS'
 
-administer ip entities:
-  title: 'Administer Ip entities'
-  description: 'Allow to access the administration form to configure Ip entities.'
+administer ips:
+  title: 'Administer IPS'
+  description: 'Allow to access the administration form to configure IPS.'
   restrict access: true
 
-delete ip entities:
-  title: 'Delete Ip entities'
+delete ips:
+  title: 'Delete IPS'
 
-edit ip entities:
-  title: 'Edit Ip entities'
+edit ips:
+  title: 'Edit IPS'
 
-view published ip entities:
-  title: 'View published Ip entities'
+view published ips:
+  title: 'View published IPS'
 
-view unpublished ip entities:
-  title: 'View unpublished Ip entities'
+view unpublished ips:
+  title: 'View unpublished IPS'

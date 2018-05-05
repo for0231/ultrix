@@ -5,7 +5,7 @@ namespace Drupal\ip\Entity;
 use Drupal\views\EntityViewsData;
 
 /**
- * Provides Views data for Ip entities.
+ * Provides Views data for IPS.
  */
 class IPViewsData extends EntityViewsData {
 

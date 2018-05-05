@@ -3,12 +3,12 @@
 entity.ip.collection:
   title: 'Ip list'
   route_name: entity.ip.collection
-  description: 'List Ip entities'
+  description: 'List IPS'
   parent: system.admin_structure
   weight: 100
 
 ip.admin.structure.settings:
   title: 'Ip settings'
-  description: 'Configure Ip entities'
+  description: 'Configure IPS'
   route_name: ip.settings
   parent: system.admin_structure
