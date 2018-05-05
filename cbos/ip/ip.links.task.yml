@@ -1,0 +1,22 @@
+# Ip routing definition
+ip.settings_tab:
+  route_name: ip.settings
+  title: 'Settings'
+  base_route: ip.settings
+
+entity.ip.canonical:
+  route_name: entity.ip.canonical
+  base_route: entity.ip.canonical
+  title: 'View'
+
+entity.ip.edit_form:
+  route_name: entity.ip.edit_form
+  base_route: entity.ip.canonical
+  title: 'Edit'
+
+entity.ip.delete_form:
+  route_name:  entity.ip.delete_form
+  base_route:  entity.ip.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,5 @@
+entity.ip.add_form:
+  route_name: entity.ip.add_form
+  title: 'Add Ip'
+  appears_on:
+    - entity.ip.collection

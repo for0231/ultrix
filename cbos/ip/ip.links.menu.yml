@@ -1,0 +1,14 @@
+
+# Ip menu items definition
+entity.ip.collection:
+  title: 'Ip list'
+  route_name: entity.ip.collection
+  description: 'List Ip entities'
+  parent: system.admin_structure
+  weight: 100
+
+ip.admin.structure.settings:
+  title: 'Ip settings'
+  description: 'Configure Ip entities'
+  route_name: ip.settings
+  parent: system.admin_structure

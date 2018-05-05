@@ -1,0 +1,19 @@
+add ip entities:
+  title: 'Create new Ip entities'
+
+administer ip entities:
+  title: 'Administer Ip entities'
+  description: 'Allow to access the administration form to configure Ip entities.'
+  restrict access: true
+
+delete ip entities:
+  title: 'Delete Ip entities'
+
+edit ip entities:
+  title: 'Edit Ip entities'
+
+view published ip entities:
+  title: 'View published Ip entities'
+
+view unpublished ip entities:
+  title: 'View unpublished Ip entities'
