@@ -18,8 +18,8 @@ use Drupal\user\UserInterface;
  * @ContentEntityType(
  *   id = "server",
  *   label = @Translation("Server"),
- *   label_collection = @Translation("Server"),
- *   bundle_label = @Translation("Server type"),
+ *   label_collection = @Translation("Servers"),
+ *   bundle_label = @Translation("Server types"),
  *   handlers = {
  *     "storage" = "Drupal\server\ServerStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",

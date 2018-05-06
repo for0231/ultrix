@@ -18,8 +18,8 @@ use Drupal\user\UserInterface;
  * @ContentEntityType(
  *   id = "order",
  *   label = @Translation("Order"),
- *   label_collection = @Translation("Order"),
- *   bundle_label = @Translation("Order type"),
+ *   label_collection = @Translation("Orders"),
+ *   bundle_label = @Translation("Order types"),
  *   handlers = {
  *     "storage" = "Drupal\order\OrderStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",

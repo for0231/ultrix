@@ -18,8 +18,8 @@ use Drupal\user\UserInterface;
  * @ContentEntityType(
  *   id = "product",
  *   label = @Translation("Product"),
- *   label_collection = @Translation("Product"),
- *   bundle_label = @Translation("Product type"),
+ *   label_collection = @Translation("Products"),
+ *   bundle_label = @Translation("Product types"),
  *   handlers = {
  *     "storage" = "Drupal\product\ProductStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",

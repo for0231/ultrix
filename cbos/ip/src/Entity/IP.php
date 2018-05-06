@@ -18,8 +18,8 @@ use Drupal\user\UserInterface;
  * @ContentEntityType(
  *   id = "ip",
  *   label = @Translation("IP"),
- *   label_collection = @Translation("IP"),
- *   bundle_label = @Translation("IP type"),
+ *   label_collection = @Translation("IPs"),
+ *   bundle_label = @Translation("IP types"),
  *   handlers = {
  *     "storage" = "Drupal\ip\IpStorage",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",

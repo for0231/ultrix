@@ -10,7 +10,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  * @ConfigEntityType(
  *   id = "server_type",
  *   label = @Translation("Server type"),
- *   label_collection = @Translation("Server type"),
+ *   label_collection = @Translation("Server types"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\server\ServerTypeListBuilder",

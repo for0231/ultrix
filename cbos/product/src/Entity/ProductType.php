@@ -10,7 +10,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  * @ConfigEntityType(
  *   id = "product_type",
  *   label = @Translation("Product type"),
- *   label_collection = @Translation("Product type"),
+ *   label_collection = @Translation("Product types"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\product\ProductTypeListBuilder",
