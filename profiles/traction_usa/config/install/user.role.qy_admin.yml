@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies: {  }
+id: qy_admin
+label: qy admin
+weight: 2
+is_admin: false
+permissions: 
+  - access administration pages
+  - view the administration theme
+  - access toolbar
+  - customize shortcut links
+  - switch shortcut sets
+  - access shortcuts
+  - administer traction common
+  - access flow lead wd admin
+  - administer qy wd policy view
+  - administer qy wd policy edit
+  - administer qy wd traction view
+  - administer qy wd traction edit
+  - administer qy wd logs view
+  - administer qy wd ip checked
+  - administer qy wd route view
+  - administer qy wd route edit
+  - administer qy wd open firewall listen
+  - administer qy wd Flow monitor
+  - administer qy wd alarm view
+  - administer qy wd alarm edit
+  - administer qy wd system config
+  - administer qy wd traction index
+  - access flow lead jd admin
+  - administer qy jd policy view
+  - administer qy jd policy edit
+  - administer qy jd traction view
+  - administer qy jd traction edit
+  - administer qy jd logs view
+  - administer qy jd ip checked
+  - administer qy jd route view
+  - administer qy jd route edit
+  - administer qy jd open firewall listen
+  - administer qy jd Flow monitor
+  - administer qy jd alarm view
+  - administer qy jd alarm edit
+  - administer qy jd system config
+  - administer qy jd traction index

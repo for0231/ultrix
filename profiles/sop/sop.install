@@ -1,0 +1,28 @@
+<?php
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function sop_install() {
+  //站点设置
+  $seit_settings = \Drupal::configFactory()->getEditable('system.site');
+  $seit_settings->set('page.front', '/user/login');
+  //$seit_settings->set('page.403', '/admin/qy/error');
+  //$seit_settings->set('page.404', '/admin/qy/error');
+  $seit_settings->save(TRUE);
+  
+  //注册帐户设置
+  $user_settings = \Drupal::configFactory()->getEditable('user.settings');
+  $user_settings->set('register', USER_REGISTER_ADMINISTRATORS_ONLY); //设置只有管理员可增加用户
+  $user_settings->set('verify_mail', false); //设置是否邮箱认证
+  $user_settings->save(TRUE);
+  
+  user_role_grant_permissions('worksheet_manage', array('access toolbar'));
+  user_role_grant_permissions('worksheet_business', array('access toolbar'));
+  user_role_grant_permissions('worksheet_operation', array('access toolbar'));
+  
+  \Drupal::configFactory()->getEditable('system.date')->set('timezone.user.configurable', 0)->save();
+}

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies: {  }
+id: qy_operator
+label: qy operator
+weight: 2
+is_admin: false
+permissions: 
+  - access administration pages
+  - view the administration theme
+  - access toolbar
+  - customize shortcut links
+  - switch shortcut sets
+  - access shortcuts
+  - administer traction common
+  - access flow lead jd admin
+  - administer qy jd policy view
+  - administer qy jd policy edit
+  - administer qy jd traction view
+  - administer qy jd traction edit
+  - administer qy jd logs view
+  - administer qy jd ip checked
+  - administer qy jd route view
+  - administer qy jd open firewall listen
+  - administer qy jd Flow monitor
+  - administer qy jd alarm view
+  - administer qy jd traction index

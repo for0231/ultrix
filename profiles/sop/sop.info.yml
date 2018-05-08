@@ -1,0 +1,16 @@
+name: sop
+type: profile
+description: '工单系统.'
+version: VERSION
+core: 8.x
+dependencies:
+  - block
+  - dblog
+  - toolbar
+  - options
+  - page_cache
+  - dynamic_page_cache
+  - worksheet
+themes:
+  - bartik
+  - seven
