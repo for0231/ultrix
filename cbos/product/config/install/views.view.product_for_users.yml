@@ -1,4 +1,3 @@
-uuid: d95dd5bf-af1a-4608-9e5d-b126f7c25716
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,7 @@ dependencies:
 id: product_for_users
 label: 'Product for Users'
 module: product
+description: 'Find and manage content.'
 tag: default
 base_table: product_field_data
 base_field: id
@@ -15,8 +15,9 @@ display:
   default:
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'view published products'
       cache:
         type: tag
       query:
@@ -34,7 +35,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 50
+          items_per_page: 40
           tags:
             previous: '‹ Previous'
             next: 'Next ›'
@@ -116,52 +117,36 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: product
+          entity_type: null
           entity_field: name
           plugin_id: field
       filters: {  }
       sorts: {  }
-      title: Products
-      header: {  }
-      footer: {  }
-      empty: {  }
+      title: 'Product for Users'
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          empty: true
+          content: 'No content available.'
+          plugin_id: text_custom
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
       filter_groups:
         operator: AND
         groups: {  }
-    cache_metadata:
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-      tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 2
-    display_options:
-      display_extenders: {  }
-      style:
-        type: html_list
-      defaults:
-        style: false
-        row: false
-        pager: false
-      row:
-        type: fields
-      pager:
-        type: some
-        options:
-          items_per_page: 5
-          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
       tags: {  }
   page_1:
     display_plugin: page
@@ -170,12 +155,11 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: user/product
+      path: products
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-      max-age: 0
       tags: {  }
