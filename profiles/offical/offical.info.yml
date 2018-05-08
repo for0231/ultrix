@@ -1,0 +1,50 @@
+name: Offical
+type: profile
+description: 'Install with commonly used features pre-configured.'
+version: VERSION
+core: 8.x
+dependencies:
+  - node
+  - history
+  - block
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - comment
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - editor
+  - entity_reference
+  - image
+  - menu_ui
+  - options
+  - path
+  - taxonomy
+  - dblog
+  - search
+  - file
+  - rdf
+  - views
+  - tour
+  - order
+  - product
+  - member
+  - idc
+  - common
+  - server
+  - part
+  - question
+  - published_information
+  - letters
+  - ip
+  - area
+  - hc_alipay
+  - hostlog
+  - login_history
+  - sop
+themes:
+  - xunyun
+  - colorm

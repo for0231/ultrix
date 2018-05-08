@@ -1,0 +1,20 @@
+id: colorm_colormenu
+theme: colorm
+weight: 1
+status: true
+langcode: en
+region: sidebar
+plugin: common_color_menu
+settings:
+  id: common_color_menu
+  label: 'Color Menu'
+  provider: common
+  label_display: '0'
+  cache:
+    max_age: 0
+dependencies:
+  module:
+    - common
+  theme:
+    - colorm
+visibility: {  }

@@ -1,0 +1,124 @@
+offical.front_page:
+  title: 'HOME'
+  description: 'HOME'
+  route_name: '<front>'
+  menu_name: main
+  weight: 0
+offical.server_page:
+  title: 'SERVER'
+  description: 'THE SERVER'
+  route_name: 'server.product.list'
+  menu_name: main
+  weight: 5
+offical.contact_page:
+  title: 'CONTACT'
+  description: 'CONTACT US'
+  route_name: 'contact.site_page'
+  menu_name: main
+  weight: 20
+
+offical.news_page:
+  title: 'NEWS'
+  description: 'DYNAMIC NEWS'
+  route_name: 'published.front.list'
+  route_parameters: { node_type: news, p_category: all}
+  menu_name: main
+  weight: 30
+
+offical.article_page:
+  title: 'DATA Center'
+  description: 'DATA CENTER'
+  route_name: 'published.front.list'
+  route_parameters: { node_type: articles, p_category: all}
+  menu_name: main
+  weight: 30
+
+
+
+
+
+##### For user account ######
+offical.account_menu:
+  title: 'Account'
+  route_name: 'member.my.account'
+  menu_name: account
+  weight: 5
+
+offical.member_to_front:
+  title: 'Home'
+  route_name: 'member.account_center'
+  menu_name: account
+  weight: 1
+offical.account_menu_order:
+  title: 'Orders'
+  route_name: 'user.order'
+  menu_name: account
+  weight: 15
+offical.account_menu_service:
+  title: 'Services'
+  route_name: 'user.server'
+  menu_name: account
+  weight: 20
+##### For account menu ######
+offical.my_accont:
+  title: 'My account'
+  route_name: 'member.my.account'
+  menu_name: hostaccounts
+  weight: 5
+offical.safe_info:
+  title: 'Secure information'
+  route_name: 'member.my.safe_info'
+  menu_name: hostaccounts
+  weight: 10
+offical.info:
+  title: 'Base information'
+  route_name: 'member.my.info'
+  menu_name: hostaccounts
+  weight: 15
+offical.consumer_record:
+  title: 'Consumer record'
+  route_name: 'member.my.consumer_record'
+  menu_name: hostaccounts
+  weight: 25
+offical.certificate:
+  title: 'Certificate management'
+  route_name: 'member.my.certificate'
+  menu_name: hostaccounts
+  weight: 30
+offical.user.letter:
+  title: 'My messages'
+  route_name: 'letter.user.letter'
+  menu_name: hostaccounts
+  weight: 35
+offical.user.loghistory:
+  title: 'Login history'
+  route_name: 'login_history.user_report'
+  menu_name: hostaccounts
+  weight: 40
+##### 订单管理 ########
+offical.user.order:
+  title: 'My orders'
+  route_name: 'user.order'
+  menu_name: hostorder
+  weight: 5
+##### 我的服务 ########
+offical.user.server:
+  title: 'My servers'
+  route_name: 'user.server'
+  menu_name: hostservice
+  weight: 5
+offical.user.cancel_server:
+  title: '退订记录'
+  route_name: 'user.server.stop.info'
+  menu_name: hostservice
+  weight: 10
+offical.question.client.admin:
+  title: 'My questions'
+  route_name: 'question.client.admin'
+  menu_name: hostservice
+  weight: 15
+offical.question.add_form:
+  title: 'New question'
+  route_name: 'question.add_form'
+  menu_name: hostservice
+  weight: 20

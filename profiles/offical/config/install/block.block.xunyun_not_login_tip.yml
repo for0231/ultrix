@@ -1,0 +1,19 @@
+id: xunyun_not_login_tip
+theme: xunyun
+weight: -1
+status: true
+langcode: en
+region: header
+plugin: 'common_not_login_tip'
+settings:
+  id: common_not_login_tip
+  label: 'Not login tips'
+  provider: common
+  label_display: '0'
+dependencies:
+  module:
+    - common
+  theme:
+    - xunyun
+visibility: { }
+

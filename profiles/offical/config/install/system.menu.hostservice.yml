@@ -1,0 +1,5 @@
+id: hostservice
+label: 'My service'
+description: 'For service management'
+langcode: en
+locked: true

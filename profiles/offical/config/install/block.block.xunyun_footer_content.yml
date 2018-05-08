@@ -1,0 +1,23 @@
+id: xunyun_footer_content
+theme: xunyun
+weight: -2
+status: true
+langcode: en
+region: footer
+plugin: 'common_bottom_content'
+settings:
+  id: 'common_bottom_content'
+  label: 'bottom content'
+  provider: system
+  label_display: '0'
+  cache:
+    max_age: -1
+  level: 1
+  depth: 0
+dependencies:
+  module:
+    - common
+  theme:
+    - xunyun
+visibility: {  }
+

@@ -1,0 +1,22 @@
+id: xunyun_hostaccounts
+theme: xunyun
+weight: 0
+status: true
+langcode: en
+region: sidebar_first
+plugin: 'system_menu_block:hostaccounts'
+settings:
+  id: 'system_menu_block:hostaccounts'
+  label: 'Accounts navigation'
+  provider: system
+  label_display: true
+  cache:
+    max_age: -1
+  level: 1
+  depth: 1
+dependencies:
+  module:
+    - system
+  theme:
+    - xunyun
+visibility: {}
