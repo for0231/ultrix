@@ -1,5 +1,0 @@
-drupal.multi-part-widget:
-  version: VERSION
-  css:
-    component:
-      css/multi-part-widget.css: {}

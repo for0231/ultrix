@@ -1,6 +1,0 @@
-name: Access source statistics
-type: module
-description: 统计访问来源
-package: Hostspaces
-core: 8.x
-version: VERSION

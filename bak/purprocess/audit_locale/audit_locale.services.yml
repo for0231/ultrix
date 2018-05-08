@@ -1,4 +1,0 @@
-services:
-  audit_locale.audit_localeservice:
-    class: Drupal\audit_locale\AuditLocaleService
-    arguments: ['@database']

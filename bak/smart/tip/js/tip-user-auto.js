@@ -1,3 +1,0 @@
-(function ($, Drupal) {
-
-})(jQuery, Drupal);

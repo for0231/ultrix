@@ -1,4 +1,0 @@
-login_history.user_report:
-  route_name: login_history.user_report
-  base_route: user.view
-  title: Login history

@@ -1,8 +1,0 @@
-{
-    "name": "hostspace/workbag",
-    "type": "drupal-module",
-    "license": "MIT",
-    "require": {
-        "robloach/component-installer": "*"
-    }
-}

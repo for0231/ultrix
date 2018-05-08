@@ -1,8 +1,0 @@
-name: traction remote
-type: module
-core: 8.x
-package: Flow traction
-description: '牵引系统第三方用户模块'
-version: VERSION
-dependencies:
-  - qy

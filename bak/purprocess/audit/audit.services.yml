@@ -1,4 +1,0 @@
-services:
-  audit.auditservice:
-    class: Drupal\audit\AuditService
-    arguments: ['@database']

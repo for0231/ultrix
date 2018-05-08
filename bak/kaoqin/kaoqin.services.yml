@@ -1,5 +1,0 @@
-services:
-  kaoqin.kaoqinservice:
-    class: Drupal\kaoqin\KaoqinService
-    arguments: ['@database']
-

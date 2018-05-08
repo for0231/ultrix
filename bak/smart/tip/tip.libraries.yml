@@ -1,6 +1,0 @@
-tip.msg.user.autocomplete:
-  version: VERSION
-  js:
-    js/tip-user-auto.js: {}
-  dependencies:
-    - core/drupal.autocomplete

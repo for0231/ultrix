@@ -1,7 +1,0 @@
-voice:
-  version: VERSION
-  js:
-    js/voice.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal

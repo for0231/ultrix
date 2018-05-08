@@ -1,5 +1,0 @@
-alipay.payment:
-  version: VERSION
-  css:
-    theme:
-      css/hc_alipay.css: {}

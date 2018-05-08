@@ -1,5 +1,0 @@
-services:
-  contract.contractservice:
-    class: Drupal\contract\ContractService
-    arguments: ['@database']
-

@@ -1,4 +1,0 @@
-services:
-  product.default.business:
-    class: Drupal\product\DefaultBusinessService
-    arguments: ['@database']

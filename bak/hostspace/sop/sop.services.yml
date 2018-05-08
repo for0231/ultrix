@@ -1,4 +1,0 @@
-services:
-  sop.soptaskservice:
-    class: Drupal\sop\SopTaskService
-    arguments: ['@database']

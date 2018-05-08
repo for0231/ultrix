@@ -1,4 +1,0 @@
-services:
-  requirement.requirementservice:
-    class: Drupal\requirement\RequirementService
-    arguments: ['@database']

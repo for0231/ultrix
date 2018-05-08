@@ -1,5 +1,0 @@
-admin.server_type.add:
-  route_name: admin.server_type.add_form
-  title: 'Add server catalog'
-  appears_on:
-    - admin.server_type

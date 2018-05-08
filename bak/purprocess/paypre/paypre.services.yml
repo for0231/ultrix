@@ -1,4 +1,0 @@
-services:
-  paypre.paypreservice:
-    class: Drupal\paypre\PaypreService
-    arguments: ['@database']

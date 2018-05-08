@@ -1,4 +1,0 @@
-services:
-  purchase.purchaseservice:
-    class: Drupal\purchase\PurchaseService
-    arguments: ['@database']

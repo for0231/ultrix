@@ -1,5 +1,0 @@
-admin.referer:
-  title: '访问来源'
-  parent: system.admin
-  route_name: admin.referer
-  weight: -140

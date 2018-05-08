@@ -1,4 +1,0 @@
-services:
-  part.partservice:
-    class: Drupal\part\PartService
-    arguments: ['@database']
