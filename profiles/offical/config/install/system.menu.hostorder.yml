@@ -1,5 +1,0 @@
-id: hostorder
-label: 'My orders'
-description: 'For order management'
-langcode: en
-locked: true
