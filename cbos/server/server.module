@@ -5,6 +5,8 @@
  * Contains server.module.
  */
 
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -55,4 +57,30 @@ function server_theme_suggestions_server(array $variables) {
   $suggestions[] = 'server__' . $entity->id();
   $suggestions[] = 'server__' . $entity->id() . '__' . $sanitized_view_mode;
   return $suggestions;
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function server_entity_base_field_info(EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'product') {
+    $fields = [];
+
+    $fields['server'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Server'))
+      ->setRequired(TRUE)
+      ->setSetting('target_type', 'server')
+      ->setDisplayOptions('view', [
+        'type' => 'entity_reference_table',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    return $fields;
+  }
 }

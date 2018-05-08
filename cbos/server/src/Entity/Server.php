@@ -8,10 +8,11 @@ use Drupal\Core\Entity\RevisionableContentEntityBase;
 use Drupal\Core\Entity\RevisionableInterface;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Server entity.
+ * Defines the Servers.
  *
  * @ingroup server
  *
@@ -204,9 +205,30 @@ class Server extends RevisionableContentEntityBase implements ServerInterface {
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
+    $fields['ips'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('IPs'))
+      ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
+      ->setSetting('target_type', 'ip')
+      ->setDisplayOptions('view', [
+        'type' => 'entity_reference_table',
+        'weight' => 0,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'inline_entity_form_complex',
+        'weight' => 0,
+        'settings' => [
+          'form_mode' => 'default',
+          'allow_new' => TRUE,
+          'allow_existing' => FALSE,
+          'match_operator' => 'CONTAINS',
+        ]
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Server entity.'))
+      ->setDescription(t('The user ID of author of the Servers.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -231,7 +253,7 @@ class Server extends RevisionableContentEntityBase implements ServerInterface {
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Server entity.'))
+      ->setDescription(t('The name of the Servers.'))
       ->setRevisionable(TRUE)
       ->setSettings([
         'max_length' => 50,

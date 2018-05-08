@@ -28,6 +28,12 @@ class ServerForm extends ContentEntityForm {
       ];
     }
 
+    $form['bulk_add_ips'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Bulk add ips'),
+      '#default' => '',
+      '#description' => $this->t('Eg. xxxx to do'),
+    ];
     $entity = $this->entity;
 
     return $form;

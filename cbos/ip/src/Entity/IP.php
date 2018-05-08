@@ -254,7 +254,7 @@ class Ip extends RevisionableContentEntityBase implements IpInterface {
 
     $fields['iplong'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('IP Number'))
-      ->setDescription(t('The number of ip.'))
+      ->setDescription(t('Integer of  ip.'))
       ->setSetting('unsigned', TRUE)
       ->setSetting('size', 'big');
 

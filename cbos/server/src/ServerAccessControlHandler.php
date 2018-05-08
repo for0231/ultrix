@@ -8,7 +8,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Access controller for the Server entity.
+ * Access controller for the Servers.
  *
  * @see \Drupal\server\Entity\Server.
  */

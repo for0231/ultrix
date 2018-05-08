@@ -3,3 +3,5 @@ type: module
 description: 'The servers.'
 core: 8.x
 package: 'Ultrix'
+dependencies:
+  - ip

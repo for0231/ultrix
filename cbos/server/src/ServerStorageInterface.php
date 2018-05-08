@@ -21,7 +21,7 @@ interface ServerStorageInterface extends ContentEntityStorageInterface {
    * Gets a list of Server revision IDs for a specific Server.
    *
    * @param \Drupal\server\Entity\ServerInterface $entity
-   *   The Server entity.
+   *   The Servers.
    *
    * @return int[]
    *   Server revision IDs (in ascending order).
@@ -43,7 +43,7 @@ interface ServerStorageInterface extends ContentEntityStorageInterface {
    * Counts the number of revisions in the default language.
    *
    * @param \Drupal\server\Entity\ServerInterface $entity
-   *   The Server entity.
+   *   The Servers.
    *
    * @return int
    *   The number of revisions in the default language.

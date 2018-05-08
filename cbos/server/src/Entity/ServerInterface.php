@@ -31,7 +31,7 @@ interface ServerInterface extends ContentEntityInterface, RevisionLogInterface, 
    *   The Server name.
    *
    * @return \Drupal\server\Entity\ServerInterface
-   *   The called Server entity.
+   *   The called Servers.
    */
   public function setName($name);
 
@@ -50,7 +50,7 @@ interface ServerInterface extends ContentEntityInterface, RevisionLogInterface, 
    *   The Server creation timestamp.
    *
    * @return \Drupal\server\Entity\ServerInterface
-   *   The called Server entity.
+   *   The called Servers.
    */
   public function setCreatedTime($timestamp);
 
@@ -71,7 +71,7 @@ interface ServerInterface extends ContentEntityInterface, RevisionLogInterface, 
    *   TRUE to set this Server to published, FALSE to set it to unpublished.
    *
    * @return \Drupal\server\Entity\ServerInterface
-   *   The called Server entity.
+   *   The called Servers.
    */
   public function setPublished($published);
 
@@ -90,7 +90,7 @@ interface ServerInterface extends ContentEntityInterface, RevisionLogInterface, 
    *   The UNIX timestamp of when this revision was created.
    *
    * @return \Drupal\server\Entity\ServerInterface
-   *   The called Server entity.
+   *   The called Servers.
    */
   public function setRevisionCreationTime($timestamp);
 
@@ -109,7 +109,7 @@ interface ServerInterface extends ContentEntityInterface, RevisionLogInterface, 
    *   The user ID of the revision author.
    *
    * @return \Drupal\server\Entity\ServerInterface
-   *   The called Server entity.
+   *   The called Servers.
    */
   public function setRevisionUserId($uid);
 

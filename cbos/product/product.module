@@ -57,3 +57,4 @@ function product_theme_suggestions_product(array $variables) {
   $suggestions[] = 'product__' . $entity->id() . '__' . $sanitized_view_mode;
   return $suggestions;
 }
+
