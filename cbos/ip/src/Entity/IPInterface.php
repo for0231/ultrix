@@ -14,6 +14,14 @@ use Drupal\user\EntityOwnerInterface;
  */
 interface IpInterface extends ContentEntityInterface, RevisionLogInterface, EntityChangedInterface, EntityOwnerInterface {
 
+  // IP not bind to specific server or cabinet or switch.
+  const IP_STATUS_UNBIND   = 0;
+  // IP bind to specific server.
+  const IP_STATUS_BIND   = 1;
+  // IP not bind to anything.
+  const IP_STATUS_UNUSED = 2;
+  // IP has sale to customer.
+  const IP_STATUS_USED   = 3;
   // Add get/set methods for your configuration properties here.
 
   /**

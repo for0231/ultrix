@@ -258,6 +258,26 @@ class Ip extends RevisionableContentEntityBase implements IpInterface {
       ->setSetting('unsigned', TRUE)
       ->setSetting('size', 'big');
 
+    $fields['bind_status'] = BaseFieldDefinition::create('list_integer')
+      ->setLabel(t('Bind status'))
+      ->setSetting('allowed_values', [
+        IpInterface::IP_STATUS_UNBIND => t('Unbind'),
+        IpInterface::IP_STATUS_BIND => t('Bind'),
+        IpInterface::IP_STATUS_UNUSED => t('Available'),
+        IpInterface::IP_STATUS_USED => t('Used'),
+      ])
+      ->setDefaultValue(IpInterface::IP_STATUS_UNBIND)
+      ->setDisplayOptions('view', [
+        'type' => 'list_default',
+        'weight' => 0,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'options_select',
+        'weight' => 5,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
       ->setDescription(t('A boolean indicating whether the IP is published.'))

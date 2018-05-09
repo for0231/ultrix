@@ -3,16 +3,20 @@ status: true
 dependencies:
   module:
     - product
+    - user
 id: product_for_users
 label: 'Product for Users'
 module: product
-description: 'Find and manage content.'
 tag: default
 base_table: product_field_data
 base_field: id
 core: 8.x
 display:
   default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
     display_options:
       access:
         type: perm
@@ -20,13 +24,20 @@ display:
           perm: 'view published products'
       cache:
         type: tag
+        options: {  }
       query:
         type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
-          reset_button: true
+          submit_button: Apply
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -36,9 +47,12 @@ display:
         type: full
         options:
           items_per_page: 40
+          offset: 0
+          id: 0
+          total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: ‹‹
+            next: ››
             first: '« First'
             last: 'Last »'
       style:
@@ -123,21 +137,12 @@ display:
       filters: {  }
       sorts: {  }
       title: 'Product for Users'
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          empty: true
-          content: 'No content available.'
-          plugin_id: text_custom
+      header: {  }
+      footer: {  }
+      empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-    display_plugin: default
-    id: default
-    display_title: Master
-    position: 0
       filter_groups:
         operator: AND
         groups: {  }
@@ -147,6 +152,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.permissions
       tags: {  }
   page_1:
     display_plugin: page
@@ -162,4 +168,5 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.permissions
       tags: {  }
